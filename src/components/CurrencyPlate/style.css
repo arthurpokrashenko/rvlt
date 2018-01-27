@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  min-height: 300px;
+  height: calc(100vh / 2);
+  background-color: transparent;
+}
+
+.exchange {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 100%;
+  padding: 0 32px;
+}
+
+.currencyTitle {
+  color: #fff;
+  flex-grow: 1;
+  text-align: left;
+  font-weight: 400;
+  font-size: 38px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,.15);
+}
+
+.amount {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.amount input,
+.amountPresenter {
+  font-size: 38px;
+  width: 100%;
+  text-align: right;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-top: -2px;
+}
+
+
+.sign {
+  display: inline;
+  font-size: 38px;
+  color: #fff;  
+  margin-right: -10px;
+}
+
+.balance,
+.rate {
+  font-size: 14px;
+  white-space: nowrap;
+  color: #a7d5fb;
+  margin-top: 12px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,.2);
+}
+
+.amountPresenter {
+  display: inline;
+  padding-left: 14px;
+}

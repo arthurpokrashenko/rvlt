@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plate {
+  position: relative;
+  flex: 1;
+  background-color: #1D91F1;
+}
+
+.plateSource {
+  height: calc(100vh / 2 - 40px);
+}
+
+.plateTarget {
+  background-color: #137dd4; 
+}
+
+.plateArrow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #1D91F1;
+  z-index: 1;
+}

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1D91F1;
+  padding: 4px;
+  height: 40px;
+}
+
+.left {
+  flex: 1 33%;
+}
+
+.rate {
+  flex: 1 33%;
+  text-align: center;
+
+}
+
+.right {
+  flex: 1 33%;
+  text-align: right;
+}
+
+.exchange {
+  color: #fff;
+  padding-right: 14px;
+  cursor: pointer;
+}
+
+.exchangeDisabled {
+  opacity: .5;
+  pointer-events: none;
+  cursor: default;
+}
