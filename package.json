@@ -2,6 +2,7 @@
   "name": "revolut",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://arthurpokrashenko.github.io/rvlt",
   "dependencies": {
     "accounting": "^0.4.1",
     "autoprefixer": "7.1.6",
@@ -50,7 +51,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/accounting": "^0.4.1",
@@ -63,6 +66,7 @@
     "@types/react-transition-group": "^2.0.6",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "gh-pages": "^1.1.0",
     "typescript": "^2.6.2"
   },
   "jest": {
