@@ -14,6 +14,7 @@ export interface ICurrencyPlateProps {
   isSource?: boolean;
   containerStyle?: CSSProperties;
   rate?: string;
+  isSelected?: boolean;
   onChange?: (value: number | null) => void;
 }
 
@@ -63,6 +64,20 @@ export default class CurrencyPlate extends Component<ICurrencyPlateProps, ICurre
         </div>
       </div>
     );
+  }
+
+  public componentDidMount() {
+    setTimeout(() => {
+      if (this.props.isSelected && this.amountInput) {
+        this.amountInput.focus();
+      }
+    }, 0);
+  }
+
+  public componentWillReceiveProps(nextProps: ICurrencyPlateProps) {
+    if (!this.props.isSelected && nextProps.isSelected && this.amountInput) {
+      this.amountInput.focus();
+    }
   }
 
   private handleAmountChanged(event: React.FormEvent<HTMLInputElement>) {

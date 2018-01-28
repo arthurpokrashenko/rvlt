@@ -14,6 +14,7 @@ const carouselOptions = {
   showStatus: false,
   showThumbs: false,
   emulateTouch: true,
+  verticalSwipe: 'natural',
 };
 
 const carouselCurrenciesOrder: Array<TCurrency> = ['EUR', 'GBP', 'USD'];
@@ -117,6 +118,7 @@ class Exchange extends Component<IExchangeProps, IExchangeState> {
           return (
             <CurrencyPlate
               key={item}
+              isSelected={sourceCurrency === item}
               isSource={options.isSource}
               balance={balance[item]}
               currency={item}

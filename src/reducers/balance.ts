@@ -10,6 +10,10 @@ const initialState: {[key in ECurrency]: number} = {
 export default (state = initialState, action: TAction) => {
   switch (action.type) {
     case 'exchange/EXCHANGE_SUCCESS':
+      if (action.sourceCurrency === action.targetCurrency) {
+        return state;
+      }
+
       return {
         ...state,
         [action.sourceCurrency]: state[action.sourceCurrency] - action.sourceAmount,
